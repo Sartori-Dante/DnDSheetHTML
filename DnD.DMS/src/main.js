@@ -12,9 +12,15 @@ import { createApp } from 'vue'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
+import router from './router'
+import vuetify from './plugins/vuetify'
 
 const app = createApp(App)
 
 registerPlugins(app)
+
+app.use(router)
+
+app.use(vuetify)
 
 app.mount('#app')
